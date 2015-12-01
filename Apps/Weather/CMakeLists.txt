@@ -1,0 +1,11 @@
+LIST (APPEND INCLUDES ${CMAKE_CURRENT_LIST_DIR})
+
+LIST (APPEND CLOUD_CXX_SRCS
+    ${CMAKE_CURRENT_LIST_DIR}/HttpErrorCode.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/HttpFetcher.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/JsonReader.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/JsonValue.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/JsonWriter.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Weather.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/WeatherAssertions.cpp
+    )
