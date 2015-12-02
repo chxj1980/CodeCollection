@@ -16,7 +16,7 @@ include_directories(${CMAKE_SOURCE_DIR}/UsageEnvironment/include)
 ###########                BasicUsageEnvironment                 ###########
 ############################################################################
 file(GLOB BasicUsageEnvironmentFiles
-	BasicUsageEnvironment/*.cpp)
+        BasicUsageEnvironment/*.cpp)
 add_library(BasicUsageEnvironment ${BasicUsageEnvironmentFiles})
          
          
@@ -24,7 +24,7 @@ add_library(BasicUsageEnvironment ${BasicUsageEnvironmentFiles})
 ###########                  UsageEnvironment                    ###########
 ############################################################################
 file(GLOB UsageEnvironmentFiles 
-    UsageEnvironment/*.cpp)
+        UsageEnvironment/*.cpp)
 add_library(UsageEnvironment ${UsageEnvironmentFiles})
 
 			
@@ -33,7 +33,7 @@ add_library(UsageEnvironment ${UsageEnvironmentFiles})
 ###########                      groupsock                       ###########
 ############################################################################
 file(GLOB groupsockfiles
-	groupsock/*.cpp groupsock/*.c)
+        groupsock/*.cpp groupsock/*.c)
 add_library(groupsock ${groupsockfiles})
 add_dependencies(groupsock          BasicUsageEnvironment UsageEnvironment )
 target_link_libraries (groupsock    BasicUsageEnvironment UsageEnvironment )
@@ -55,7 +55,7 @@ target_link_libraries(liveMedia     groupsock
 ###########                      mediaServer                     ###########
 ############################################################################
 file(GLOB mediaServerFiles
-	mediaServer/*.hh mediaServer/*.cpp)
+        mediaServer/*.hh mediaServer/*.cpp)
 add_executable(mediaServer ${mediaServerFiles})
 add_dependencies(mediaServer    BasicUsageEnvironment 
                 groupsock UsageEnvironment liveMedia 
